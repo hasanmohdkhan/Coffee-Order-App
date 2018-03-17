@@ -3,60 +3,60 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:layout_marginBottom="@dimen/margin_bottom"
+    android:layout_marginEnd="@dimen/margin_right"
     android:layout_marginLeft="@dimen/margin_left"
+    android:layout_marginRight="@dimen/margin_right"
     android:layout_marginStart="@dimen/margin_left"
     android:layout_marginTop="@dimen/margin_top"
-    android:layout_marginBottom="@dimen/margin_bottom"
-    android:layout_marginRight="@dimen/margin_right"
-    android:layout_marginEnd="@dimen/margin_right"
     android:orientation="vertical"
     tools:context="com.example.hasanzian.justjava.MainActivity">
 
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginBottom="@dimen/margin_bottom"
         android:text="@string/quantity"
-        android:textAllCaps="true"
-        android:layout_marginBottom="@dimen/margin_bottom"/>
-   <LinearLayout
-       android:layout_width="wrap_content"
-       android:layout_height="wrap_content"
-       android:orientation="horizontal">
+        android:textAllCaps="true" />
 
-       <Button
-           android:layout_width="48dp"
-           android:layout_height="48dp"
-           android:text="@string/btn_decrement"
-           android:onClick="decrement"
-           />
-
-       <TextView
-           android:id="@+id/quantity_text_view"
-           android:layout_width="wrap_content"
-           android:layout_height="wrap_content"
-           android:text="@string/quantity_numbers"
-           android:textColor="@color/color_Black"
-           android:textSize="@dimen/quantity_text_view_size"
-           android:layout_marginRight="@dimen/btn_margin"
-           android:layout_marginLeft="@dimen/btn_margin"
-
-           />
-
-       <Button
-           android:layout_width="48dp"
-           android:layout_height="48dp"
-           android:text="@string/btn_increment"
-           android:onClick="increment"/>
-
-   </LinearLayout>
-
-    <TextView
-        android:layout_marginTop="@dimen/margin_top"
+    <LinearLayout
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <Button
+            android:layout_width="48dp"
+            android:layout_height="48dp"
+            android:onClick="decrement"
+            android:text="@string/btn_decrement" />
+
+        <TextView
+            android:id="@+id/quantity_text_view"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/btn_margin"
+            android:layout_marginRight="@dimen/btn_margin"
+            android:text="@string/quantity_numbers"
+            android:textColor="@color/color_Black"
+            android:textSize="@dimen/quantity_text_view_size"
+
+            />
+
+        <Button
+            android:layout_width="48dp"
+            android:layout_height="48dp"
+            android:onClick="increment"
+            android:text="@string/btn_increment" />
+
+    </LinearLayout>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="@dimen/margin_bottom"
+        android:layout_marginTop="@dimen/margin_top"
         android:text="@string/price_text_view"
-        android:textAllCaps="true"
-        android:layout_marginBottom="@dimen/margin_bottom"/>
+        android:textAllCaps="true" />
 
     <TextView
         android:id="@+id/price_text_view"
@@ -64,13 +64,14 @@
         android:layout_height="wrap_content"
         android:text="@string/price_of_coffees"
         android:textColor="@color/color_Black"
-        android:textSize="@dimen/quantity_text_view_size"
-        />
+        android:textSize="@dimen/quantity_text_view_size" />
+
+
     <Button
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="@dimen/margin_top"
-        android:text="@string/order_btn_string"
-        android:onClick="submitOrder"/>
+        android:onClick="submitOrder"
+        android:text="@string/order_btn_string" />
 
 </LinearLayout>

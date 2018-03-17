@@ -24,7 +24,9 @@ public class MainActivity extends AppCompatActivity {
      * This method is called when the order button is clicked.
      */
     public void submitOrder(View view) {
-        displayPrice(quantity * 5);
+        int   totalAmoumnt = displayPrice(quantity * 5);
+        String message = "Total: \u20B9 " + totalAmoumnt + "\nThank You!";
+        displayMessage(message);
     }
 
     /**
@@ -38,11 +40,20 @@ public class MainActivity extends AppCompatActivity {
     /**
      * This method displays the given price on the screen.
      */
-    private void displayPrice(int number) {
+    private int displayPrice(int number) {
         TextView priceTextView = (TextView) findViewById(R.id.price_text_view);
         if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.N) {
             priceTextView.setText(NumberFormat.getCurrencyInstance().format(number));
         }
+        return number;
+    }
+
+    /**
+     * This method displays the given text on the screen.
+     */
+    private void displayMessage(String message) {
+        TextView priceTextView = (TextView) findViewById(R.id.price_text_view);
+        priceTextView.setText(message);
     }
 
     public void increment(View view) {
@@ -53,7 +64,6 @@ public class MainActivity extends AppCompatActivity {
     }
 
     public void decrement(View view) {
-
         if (quantity > 1) {
             quantity -= 1;
             display(quantity);
