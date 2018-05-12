@@ -55,11 +55,11 @@
         android:layout_height="wrap_content"
         android:layout_marginBottom="@dimen/margin_bottom"
         android:layout_marginTop="@dimen/margin_top"
-        android:text="@string/price_text_view"
+        android:text="@string/order_summary_string"
         android:textAllCaps="true" />
 
     <TextView
-        android:id="@+id/price_text_view"
+        android:id="@+id/order_summary_text_view"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="@string/price_of_coffees"

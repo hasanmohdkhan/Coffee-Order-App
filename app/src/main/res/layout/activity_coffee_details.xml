@@ -1,0 +1,240 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    style="@style/MarginRoot"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/whiteColor"
+    android:orientation="vertical"
+    tools:context="com.example.hasanzian.justjava.CoffeeDetails">
+
+    <LinearLayout
+        android:id="@+id/mini_summary"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <ImageView
+            android:id="@+id/product_image"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:src="@drawable/cappuccino" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/product_name"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="top"
+                android:text="@string/cappuccino_string"
+                android:textSize="20sp"
+                android:textStyle="bold" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/price_total"
+                    style="@style/EqualWidth"
+                    android:layout_gravity="bottom"
+                    android:layout_marginTop="8dp"
+                    android:text="\u20B9 5" />
+
+                <LinearLayout
+                    style="@style/TextHeadingStyle"
+                    android:orientation="horizontal">
+
+                    <Button
+                        android:id="@+id/button_decrement"
+                        android:layout_width="48dp"
+                        android:layout_height="48dp"
+                        android:text="@string/btn_decrement" />
+
+                    <TextView
+                        android:id="@+id/quantity_text_view"
+                        style="@style/TextHeadingStyle"
+                        android:layout_marginLeft="@dimen/btn_margin"
+                        android:layout_marginRight="@dimen/btn_margin"
+                        android:text="@string/quantity_numbers"
+                        android:textColor="@color/color_Black"
+                        android:layout_gravity="center"
+                        android:textSize="@dimen/quantity_text_view_size"
+
+                        />
+
+                    <Button
+                        android:id="@+id/button_increment"
+                        android:layout_width="48dp"
+                        android:layout_height="48dp"
+                        android:text="@string/btn_increment" />
+                </LinearLayout>
+
+
+            </LinearLayout>
+
+
+        </LinearLayout>
+
+
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/product_wiki"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/cappuccino_wiki_string" />
+
+    <View
+        android:id="@+id/divider"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_marginTop="8dp"
+        android:background="@android:color/darker_gray" />
+
+    <TextView
+        android:id="@+id/size_of_product"
+        style="@style/TextHeadingStyle"
+        android:text="@string/size_string" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <LinearLayout
+            android:id="@+id/small_price_card"
+            style="@style/EqualWidth"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/siz_small"
+                style="@style/EqualHeight"
+                android:text="@string/small_string" />
+
+            <TextView
+                android:id="@+id/price_siz_small"
+                style="@style/EqualHeight"
+                android:text="@string/price_small_string" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/medium_price_card"
+            style="@style/EqualWidth"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/size_medium"
+                style="@style/EqualHeight"
+                android:text="@string/medium_string" />
+
+            <TextView
+                android:id="@+id/price_size_medium"
+                style="@style/EqualHeight"
+                android:text="@string/price_medium_string" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/large_price_card"
+            style="@style/EqualWidth"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/size_large"
+                style="@style/EqualHeight"
+                android:text="@string/large_string" />
+
+            <TextView
+                android:id="@+id/price_size_large"
+                style="@style/EqualHeight"
+                android:text="@string/price_large_string" />
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/milk_of_product"
+        style="@style/TextHeadingStyle"
+        android:text="@string/milk_string"
+
+        />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <TextView
+            android:id="@+id/full_cream_card_switch"
+            style="@style/EqualWidth"
+            android:text="@string/full_cream_milk_string" />
+
+        <TextView
+            android:id="@+id/skimmed_cream_card_switch"
+            style="@style/EqualWidth"
+            android:text="@string/semi_skimmed_milk_string" />
+
+        <TextView
+            android:id="@+id/soy_card_switch"
+            style="@style/EqualWidth"
+            android:text="@string/soy_nmilk_string" />
+
+
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/syrup_of_product"
+        style="@style/TextHeadingStyle"
+        android:text="@string/syrup_string" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <TextView
+            android:id="@+id/no_syrup_switch_card"
+            style="@style/EqualWidth"
+            android:text="@string/no_syrup_string" />
+
+        <TextView
+            android:id="@+id/vanilla_switch_card"
+            style="@style/EqualWidth"
+            android:text="@string/vanilla_string" />
+
+        <TextView
+            android:id="@+id/chocolate_switch_card"
+            style="@style/EqualWidth"
+            android:text="@string/chocolate_string" />
+
+
+    </LinearLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/add_item_to_cart"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/min_size_of_view"
+            android:layout_alignParentBottom="true"
+            android:gravity="center"
+            android:background="@color/colorAddToCart"
+            android:text="@string/add_string" />
+
+    </RelativeLayout>
+
+
+
+
+</LinearLayout>

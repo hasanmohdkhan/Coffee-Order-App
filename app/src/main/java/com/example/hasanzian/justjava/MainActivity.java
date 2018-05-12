@@ -1,7 +1,5 @@
 package com.example.hasanzian.justjava;
 
-import android.icu.text.NumberFormat;
-import android.os.Build;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.view.View;
@@ -24,50 +22,56 @@ public class MainActivity extends AppCompatActivity {
      * This method is called when the order button is clicked.
      */
     public void submitOrder(View view) {
-        int   totalAmoumnt = displayPrice(quantity * 5);
-        String message = "Total: \u20B9 " + totalAmoumnt + "\nThank You!";
-        displayMessage(message);
+        int   price =  calculatePrice(quantity , 10);
+        String priceMessage = createOrderSummary(quantity ,price);
+        displayMessage(priceMessage);
+     }
+
+    private String createOrderSummary(int quantity, int price) {
+        return "Name: Hasan Khan \n" +"Quantity: "+quantity +"\n" + "Total: \u20B9 "+price+"\n"+ "Thank You !" ;
     }
 
     /**
      * This method displays the given quantity value on the screen.
      */
-    private void display(int number) {
+    private void displayQuantity(int number) {
         TextView quantityTextView = (TextView) findViewById(R.id.quantity_text_view);
         quantityTextView.setText("" + number);
     }
 
-    /**
-     * This method displays the given price on the screen.
-     */
-    private int displayPrice(int number) {
-        TextView priceTextView = (TextView) findViewById(R.id.price_text_view);
-        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.N) {
-            priceTextView.setText(NumberFormat.getCurrencyInstance().format(number));
-        }
-        return number;
-    }
 
     /**
      * This method displays the given text on the screen.
      */
     private void displayMessage(String message) {
-        TextView priceTextView = (TextView) findViewById(R.id.price_text_view);
-        priceTextView.setText(message);
+        TextView orderSummaryTextView = (TextView) findViewById(R.id.order_summary_text_view);
+        orderSummaryTextView.setText(message);
     }
 
     public void increment(View view) {
         if (quantity >= 1) {
             quantity += 1;
-            display(quantity);
+            displayQuantity(quantity);
         }
     }
 
     public void decrement(View view) {
         if (quantity > 1) {
             quantity -= 1;
-            display(quantity);
+            displayQuantity(quantity);
         }
 
     }
+
+    /**
+     * Calculates the price of the order.
+     *  @param quantity is the number of cups of coffee ordered
+     * @param pricePerCup
+     * @return price
+     */
+    private int calculatePrice(int quantity, int pricePerCup) {
+        int price = quantity * pricePerCup;
+        return price;
+    }
+
 }

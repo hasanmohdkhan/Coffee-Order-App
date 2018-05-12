@@ -4,4 +4,7 @@
     <color name="colorPrimaryDark">#303F9F</color>
     <color name="colorAccent">#FF4081</color>
     <color name="color_Black">#000000</color>
+    <color name="coffeeColor">#F2DDBE</color>
+    <color name="whiteColor">#FFFFFF</color>
+    <color name="colorAddToCart">#E15079</color>
 </resources>

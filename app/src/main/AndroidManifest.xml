@@ -7,15 +7,30 @@
         android:icon="@mipmap/ic_launcher"
         android:label="@string/app_name"
         android:roundIcon="@mipmap/ic_launcher_round"
-        android:supportsRtl="true"
-        android:theme="@style/AppTheme">
-        <activity android:name=".MainActivity">
+        android:supportsRtl="true">
+        <activity
+            android:name=".MainActivity"
+            android:theme="@style/AppTheme" />
+        <activity
+            android:name=".SplashScreen"
+            android:theme="@style/splash">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+        <activity
+            android:name=".CatalogueActivity"
+            android:theme="@style/AppTheme" />
+        <activity
+            android:name=".CoffeeTypesCategory"
+            android:theme="@style/AppTheme" />
+        <activity
+            android:name=".CoffeeDetails"
+            android:theme="@style/splash" />
+        <activity android:name=".OrderListActivity"
+            android:theme="@style/AppTheme" ></activity>
     </application>
 
 </manifest>
