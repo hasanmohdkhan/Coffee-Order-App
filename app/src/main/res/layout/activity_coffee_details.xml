@@ -19,7 +19,8 @@
             android:id="@+id/product_image"
             android:layout_width="100dp"
             android:layout_height="100dp"
-            android:src="@drawable/cappuccino" />
+            android:src="@drawable/cappuccino"
+            android:contentDescription="@string/product_image" />
 
         <LinearLayout
             android:layout_width="match_parent"
@@ -46,10 +47,10 @@
                     style="@style/EqualWidth"
                     android:layout_gravity="bottom"
                     android:layout_marginTop="16dp"
-                    android:textSize="24sp"
+                    android:textSize="@dimen/text_size_24sp"
                     android:textStyle="bold"
                     android:textColor="@color/priceColor"
-                    android:text="\u20B9 5" />
+                    android:text="@string/u20b9_5" />
 
                 <LinearLayout
                     style="@style/TextHeadingStyle"
@@ -143,7 +144,7 @@
                     android:layout_height="match_parent"
                     android:gravity="center"
                     android:layout_marginLeft="8dp"
-                    >
+                    android:layout_marginStart="8dp">
                     <TextView
                         android:id="@+id/siz_small"
                         android:gravity="center"
@@ -184,7 +185,8 @@
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
                     android:gravity="center"
-                    android:layout_marginLeft="8dp">
+                    android:layout_marginLeft="8dp"
+                    android:layout_marginStart="8dp">
             <TextView
                 android:id="@+id/size_medium"
                 android:layout_width="match_parent"
@@ -222,7 +224,8 @@
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:gravity="center"
-                android:layout_marginLeft="8dp">
+                android:layout_marginLeft="8dp"
+                android:layout_marginStart="8dp">
 
             <TextView
                 android:id="@+id/size_large"
@@ -375,7 +378,7 @@
             android:layout_height="@dimen/min_size_of_view"
             android:layout_alignParentBottom="true"
             android:textColor="@color/whiteColor"
-            android:textSize="24sp"
+            android:textSize="@dimen/text_size_24sp"
             android:gravity="center"
             android:background="@color/colorAddToCart"
             android:text="@string/add_string" />

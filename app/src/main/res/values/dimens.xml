@@ -7,4 +7,5 @@
     <dimen name="quantity_text_view_size">16sp</dimen>
     <dimen name="btn_margin">8dp</dimen>
     <dimen name="min_size_of_view">48dp</dimen>
+    <dimen name="text_size_24sp">24sp</dimen>
 </resources>

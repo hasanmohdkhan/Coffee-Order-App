@@ -66,4 +66,6 @@
     <string name="timeline_status_two">Order is preparing</string>
     <string name="timeline_status_three">Order is ready to pickup</string>
     <string name="timeline_status_four">Please collect your order from  pickup window no: 9</string>
+    <string name="u20b9_5">₹ 5</string>
+    <string name="product_image">product image</string>
 </resources>

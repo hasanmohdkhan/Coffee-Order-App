@@ -2,6 +2,7 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:orientation="vertical"
     xmlns:tool="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools">
 
@@ -16,7 +17,8 @@
             android:id="@+id/ordered_item_icon"
             android:layout_width="100dp"
             android:layout_height="100dp"
-            android:src="@drawable/cappuccino"/>
+            tools:src="@drawable/cappuccino"
+            android:contentDescription="@string/product_image" />
 
         <LinearLayout
             style="@style/EqualWidth"
