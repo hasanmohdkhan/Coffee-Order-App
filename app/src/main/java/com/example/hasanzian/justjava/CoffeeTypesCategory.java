@@ -44,9 +44,9 @@ public class CoffeeTypesCategory extends AppCompatActivity {
                 String name = String.valueOf(mAdaptor.getItem(position).getmCategoryName());
                 String wiki = String.valueOf(mAdaptor.getItem(position).getmWiki());
                 int iconId = mAdaptor.getItem(position).getmIcon();
-                bundle.putString("Name" , name);
-                bundle.putInt("Icon",iconId);
-                bundle.putString("Wiki",wiki);
+                bundle.putString(getString(R.string.bundle_string_name) , name);
+                bundle.putInt(getString(R.string.bundle_string_icon),iconId);
+                bundle.putString(getString(R.string.bundle_string_wiki),wiki);
                 Intent intent = new Intent(getApplicationContext(), CoffeeDetails.class);
                 intent.putExtras(bundle);
                 startActivity(intent);

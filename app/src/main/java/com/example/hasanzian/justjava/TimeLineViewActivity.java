@@ -17,10 +17,10 @@ public class TimeLineViewActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_time_line_view);
 
-        timeLineList.add(new CatalogListModel("20 min ago", "Order Placed"));
-        timeLineList.add(new CatalogListModel("18 min ago", "Order is preparing"));
-        timeLineList.add(new CatalogListModel("2 min ago", "Order is ready to pickup"));
-        timeLineList.add(new CatalogListModel("20 sec ago", "Please collect your order from  pickup window no: 9"));
+        timeLineList.add(new CatalogListModel(getString(R.string.timeline_date_one), getString(R.string.timeline_status_one)));
+        timeLineList.add(new CatalogListModel(getString(R.string.timeline_date_two), getString(R.string.timeline_status_two)));
+        timeLineList.add(new CatalogListModel(getString(R.string.timeline_date_three), getString(R.string.timeline_status_three)));
+        timeLineList.add(new CatalogListModel(getString(R.string.timeline_date_four), getString(R.string.timeline_status_four)));
         ListView timeLineListView = findViewById(R.id.time_line_list);
         TimeLineAdaptor timeLineAdaptor = new TimeLineAdaptor(this, timeLineList);
         timeLineListView.setAdapter(timeLineAdaptor);

@@ -31,9 +31,9 @@ public class CoffeeDetails extends AppCompatActivity implements View.OnClickList
 
         Bundle bundleExtras = getIntent().getExtras();
         if (bundleExtras != null) {
-            nameOfProduct = bundleExtras.getString("Name");
-            iconId = bundleExtras.getInt("Icon");
-            wiki = bundleExtras.getString("Wiki");
+            nameOfProduct = bundleExtras.getString(getString(R.string.bundle_string_name));
+            iconId = bundleExtras.getInt(getString(R.string.bundle_string_icon));
+            wiki = bundleExtras.getString(getString(R.string.bundle_string_wiki));
 
             productName = findViewById(R.id.product_name);
             productIcon = findViewById(R.id.product_image);
@@ -100,16 +100,16 @@ public class CoffeeDetails extends AppCompatActivity implements View.OnClickList
                 } else {
                     orderSummary = selectedOptionsforCoffee + "," + selectedOptionForMilk + "," + selectOptionforSyrup;
                 }
-                bundle.putString("Name", name);
-                bundle.putString("Summary", orderSummary);
+                bundle.putString(getString(R.string.bundle_putstring_name), name);
+                bundle.putString(getString(R.string.bundle_order_summary), orderSummary);
                 productIcon.buildDrawingCache();
                 Bitmap bitmap = productIcon.getDrawingCache();
 
 
-                bundle.putString("Total", totalOrderPrice);
+                bundle.putString(getString(R.string.bundle_string_total), totalOrderPrice);
                 Intent intent = new Intent(getApplicationContext(), OrderListActivity.class);
                 intent.putExtras(bundle);
-                intent.putExtra("data", bitmap);
+                intent.putExtra(getString(R.string.bundle_string_data), bitmap);
                 startActivity(intent);
 
                 // bundle detials

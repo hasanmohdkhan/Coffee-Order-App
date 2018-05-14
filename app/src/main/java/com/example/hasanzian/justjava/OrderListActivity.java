@@ -4,7 +4,6 @@ import android.content.Intent;
 import android.graphics.Bitmap;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
-import android.util.Log;
 import android.view.View;
 import android.widget.ListView;
 import android.widget.TextView;
@@ -33,10 +32,10 @@ public class OrderListActivity extends AppCompatActivity {
 
         Bundle bundleExtras = getIntent().getExtras();
         if(bundleExtras != null) {
-            nameOfProduct = bundleExtras.getString("Name");
-            bitmap = getIntent().getParcelableExtra("data");
-            total = bundleExtras.getString("Total");
-            summary = bundleExtras.getString("Summary");
+            nameOfProduct = bundleExtras.getString(getString(R.string.bundle_string_name));
+            bitmap = getIntent().getParcelableExtra(getString(R.string.bundle_string_data));
+            total = bundleExtras.getString(getString(R.string.bundle_string_total));
+            summary = bundleExtras.getString(getString(R.string.bundle_order_summary));
 
         }
         TextView confirmOrder = findViewById(R.id.order_item_confirm);
@@ -48,11 +47,10 @@ public class OrderListActivity extends AppCompatActivity {
         cartListView.setAdapter(mCartAdaptor);
         mCartAdaptor.notifyDataSetChanged();
 
-        confirmOrder.setText("Order"+"(\u20B9 "+sum+")");
+        confirmOrder.setText(getString(R.string.order_button)+"(\u20B9 "+sum+")");
 
-        Log.d("list" , ""+OrderItem.size());
 
-       confirmOrder.setOnClickListener(new View.OnClickListener() {
+        confirmOrder.setOnClickListener(new View.OnClickListener() {
            @Override
            public void onClick(View view) {
                Intent intent = new Intent(getApplicationContext() , TimeLineViewActivity.class);

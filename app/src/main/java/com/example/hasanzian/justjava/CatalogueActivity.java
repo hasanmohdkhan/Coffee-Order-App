@@ -20,10 +20,10 @@ public class CatalogueActivity extends AppCompatActivity {
         setContentView(R.layout.activity_catalogue);
 
         ArrayList<CatalogListModel> list = new ArrayList<>();
-        list.add(new CatalogListModel(R.drawable.cup_with_cream, "Coffee"));
-        list.add(new CatalogListModel(R.drawable.cup_with_smoke, "Cold Coffee"));
-        list.add(new CatalogListModel(R.drawable.glass_hot_smoke, "Shake"));
-        list.add(new CatalogListModel(R.drawable.glass_sake, "Latte"));
+        list.add(new CatalogListModel(R.drawable.cup_with_cream, getString(R.string.main_screen_coffee_string)));
+        list.add(new CatalogListModel(R.drawable.cup_with_smoke, getString(R.string.main_screen_cold_coffee_string)));
+        list.add(new CatalogListModel(R.drawable.glass_hot_smoke, getString(R.string.main_screen_shake_string)));
+        list.add(new CatalogListModel(R.drawable.glass_sake, getString(R.string.main_screen_latte_string)));
         GridView gridView = findViewById(R.id.grid_view);
         Adaptor mAdaptor = new Adaptor(this, list);
         gridView.setAdapter(mAdaptor);

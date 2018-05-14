@@ -46,4 +46,24 @@
     <string name="caffe_shakerato_wiki">Caffé shakerato [sheh-keh-RAH-toh] or caffè freddo [kahf-FEH FREHD-doh] is an espresso. The barman shake it with ice, therefore it is perfect for hot summer days.</string>
     <string name="order_string">Order</string>
     <string name="splash_screen_content_desc">splash screen</string>
+    <string name="main_screen_coffee_string">Coffee</string>
+    <string name="main_screen_cold_coffee_string">Cold Coffee</string>
+    <string name="main_screen_shake_string">Shake</string>
+    <string name="main_screen_latte_string">Latte</string>
+    <string name="bundle_string_name">Name</string>
+    <string name="bundle_string_icon">Icon</string>
+    <string name="bundle_string_wiki">Wiki</string>
+    <string name="bundle_putstring_name">Name</string>
+    <string name="bundle_order_summary">Summary</string>
+    <string name="bundle_string_total">Total</string>
+    <string name="bundle_string_data">data</string>
+    <string name="order_button">Order</string>
+    <string name="timeline_date_one">20 min ago</string>
+    <string name="timeline_date_two">18 min ago</string>
+    <string name="timeline_date_three">2 min ago</string>
+    <string name="timeline_date_four">20 sec ago</string>
+    <string name="timeline_status_one">Order Placed</string>
+    <string name="timeline_status_two">Order is preparing</string>
+    <string name="timeline_status_three">Order is ready to pickup</string>
+    <string name="timeline_status_four">Please collect your order from  pickup window no: 9</string>
 </resources>
