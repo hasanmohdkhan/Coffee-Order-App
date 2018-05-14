@@ -157,7 +157,7 @@
                         android:layout_below="@+id/siz_small"
                         android:id="@+id/price_siz_small"
                         android:gravity="center"
-                        android:textColor="#E75095"
+                        android:textColor="@color/lightPink"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:text="@string/price_small_string" />
@@ -201,7 +201,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:gravity="center"
-                android:textColor="#E75095"
+                android:textColor="@color/lightPink"
                 android:text="@string/price_medium_string" />
                 </RelativeLayout>
             </android.support.v7.widget.CardView>
@@ -241,7 +241,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:text="@string/price_large_string"
-                android:textColor="#E75095"
+                android:textColor="@color/lightPink"
                 android:gravity="center"/>
             </RelativeLayout>
             </android.support.v7.widget.CardView>

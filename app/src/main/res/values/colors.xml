@@ -23,7 +23,7 @@
     <color name="resetButtonColor">#eeff41</color>
     <color name="btn_background_color_level_two">#cc12ffc4</color>
     <color name="btn_background_color_level_three">#7b1de9b6</color>
-
+    <color name="lightPink">#E75095</color>
 
 
 </resources>
