@@ -12,6 +12,17 @@ public class CatalogListModel {
     private  String mWiki;
     private Bitmap mBitmap;
     private  String mTotal;
+    private String mTimeLineDate;
+    private String mTimeLineCardText;
+
+    public CatalogListModel(String mTimeLineDate, String mTimeLineCardText) {
+        this.mTimeLineDate = mTimeLineDate;
+        this.mTimeLineCardText = mTimeLineCardText;
+    }
+
+    public String getmTimeLineCardText() {
+        return mTimeLineCardText;
+    }
 
     public CatalogListModel(int mIcon, String mCategoryName , String mWiki) {
         this.mIcon = mIcon;
@@ -49,5 +60,9 @@ public class CatalogListModel {
 
     public String getmTotal() {
         return mTotal;
+    }
+
+    public String getmTimeLineDate() {
+        return mTimeLineDate;
     }
 }

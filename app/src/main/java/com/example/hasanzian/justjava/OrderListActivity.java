@@ -1,9 +1,13 @@
 package com.example.hasanzian.justjava;
 
+import android.content.Intent;
 import android.graphics.Bitmap;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
+import android.util.Log;
+import android.view.View;
 import android.widget.ListView;
+import android.widget.TextView;
 
 import com.example.hasanzian.justjava.dataModel.CatalogListModel;
 import com.example.hasanzian.justjava.utils.CartAdaptor;
@@ -11,11 +15,16 @@ import com.example.hasanzian.justjava.utils.CartAdaptor;
 import java.util.ArrayList;
 
 public class OrderListActivity extends AppCompatActivity {
-    public ArrayList<CatalogListModel> OrderItem;
+    public static ArrayList<CatalogListModel> OrderItem = new ArrayList<>();
     String  nameOfProduct;
     Bitmap bitmap;
     String summary;
     String total;
+    ListView cartListView;
+    CartAdaptor mCartAdaptor;
+    static int  sum = 0;
+    Number number = null;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -29,26 +38,29 @@ public class OrderListActivity extends AppCompatActivity {
             total = bundleExtras.getString("Total");
             summary = bundleExtras.getString("Summary");
 
-//            TextView textView = findViewById(R.id.text_order);
-//            ImageView img = findViewById(R.id.ordered_item_icon);
-//            TextView totalTv = findViewById(R.id.text_order_total);
-//            TextView summaryTv = findViewById(R.id.text_order_summary);
-//            summaryTv.setText(summary);
-//            totalTv.setText(total);
-//            img.setImageBitmap(bitmap);
-//            textView.setText(nameOfProduct);
-
         }
+        TextView confirmOrder = findViewById(R.id.order_item_confirm);
 
-        OrderItem = new ArrayList<>();
+        sum += Integer.parseInt(total.replaceAll("\u20B9","").trim());
         OrderItem.add(new CatalogListModel(bitmap , nameOfProduct ,summary ,total));
-        ListView cartListView =findViewById(R.id.order_cart_list_view);
-        CartAdaptor mCartAdaptor =new CartAdaptor(this,OrderItem);
+        cartListView = findViewById(R.id.order_cart_list_view);
+        mCartAdaptor  = new CartAdaptor(this,OrderItem);
         cartListView.setAdapter(mCartAdaptor);
+        mCartAdaptor.notifyDataSetChanged();
 
+        confirmOrder.setText("Order"+"(\u20B9 "+sum+")");
 
+        Log.d("list" , ""+OrderItem.size());
 
+       confirmOrder.setOnClickListener(new View.OnClickListener() {
+           @Override
+           public void onClick(View view) {
+               Intent intent = new Intent(getApplicationContext() , TimeLineViewActivity.class);
+               startActivity(intent);
+               finish();
 
+           }
+       });
 
     }
 }

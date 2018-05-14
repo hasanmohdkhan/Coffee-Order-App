@@ -4,14 +4,16 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="com.example.hasanzian.justjava.SplashScreen">
+    tools:context="com.example.hasanzian.justjava.SplashScreen"
+    android:background="#ECF5F4">
 
-    <TextView
+    <ImageView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="WELCOME"
-        android:textSize="56sp"
         android:layout_gravity="center"
+        android:src="@drawable/splash"
+        android:scaleType="fitXY"
+        android:contentDescription="@string/splash_screen_content_desc"
         />
 
 </LinearLayout>

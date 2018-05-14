@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">Just Java</string>
+    <string name="app_name">Sophia Cafe</string>
     <string name="quantity">Quantity</string>
     <string name="quantity_numbers">1</string>
     <string name="order_btn_string">ORDER</string>
@@ -44,4 +44,6 @@
     <string name="macaccino_wiki">Mocaccino [mok-kah-CHEE-noh] is a cappuccino with the addition of a little hot chocolate and cream, served in a transparent cup.</string>
     <string name="cappuccino_wiki">Cappuccino [kahp-pooh-CHEE-noh] is a slightly long espresso with the addition of about 100 ml of frothed milk, served in a large cup, sometimes with a sprinkle of cocoa.</string>
     <string name="caffe_shakerato_wiki">Caffé shakerato [sheh-keh-RAH-toh] or caffè freddo [kahf-FEH FREHD-doh] is an espresso. The barman shake it with ice, therefore it is perfect for hot summer days.</string>
+    <string name="order_string">Order</string>
+    <string name="splash_screen_content_desc">splash screen</string>
 </resources>

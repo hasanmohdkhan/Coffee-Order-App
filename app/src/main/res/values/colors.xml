@@ -1,10 +1,29 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <color name="colorPrimary">#3F51B5</color>
-    <color name="colorPrimaryDark">#303F9F</color>
+    <color name="colorPrimary">#ff0054</color>
+    <color name="colorPrimaryDark">#ff5b80</color>
     <color name="colorAccent">#FF4081</color>
     <color name="color_Black">#000000</color>
     <color name="coffeeColor">#F2DDBE</color>
     <color name="whiteColor">#FFFFFF</color>
     <color name="colorAddToCart">#E15079</color>
+    <color name="priceColor">#E75095</color>
+
+
+
+
+    <color name="primaryDarkColor">#c4002c</color>
+    <color name="primaryTextColor">#000000</color>
+    <color name="teamNameColor">#616161</color>
+    <color name="scoreTextColor">#000000</color>
+    <color name="colorTeamA">#1de9b6</color>
+    <color name="colorTeamB">#b388ff</color>
+    <color name="colorTeamBLightShade">#b0b388ff</color>
+    <color name="colorTeamBLight">#ddb388ff</color>
+    <color name="resetButtonColor">#eeff41</color>
+    <color name="btn_background_color_level_two">#cc12ffc4</color>
+    <color name="btn_background_color_level_three">#7b1de9b6</color>
+
+
+
 </resources>

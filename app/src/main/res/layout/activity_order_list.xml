@@ -6,13 +6,38 @@
     tools:context="com.example.hasanzian.justjava.OrderListActivity"
     android:orientation="vertical">
 
-<ListView
-    android:id="@+id/order_cart_list_view"
+<RelativeLayout
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     >
 
-</ListView>
+    <ListView
+        android:id="@+id/order_cart_list_view"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        tools:listitem="@layout/cart_list_item"
+        android:divider="@null"
+        android:layout_marginBottom="48dp"
+        />
+
+    <TextView
+        android:id="@+id/order_item_confirm"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/min_size_of_view"
+        android:layout_alignParentBottom="true"
+        android:gravity="center"
+        android:background="@color/colorAddToCart"
+        android:text="@string/order_string"
+        android:textColor="@color/whiteColor"
+        android:textStyle="bold"
+        android:textSize="24sp"/>
+
+
+
+
+</RelativeLayout>
+
+
 
 
 

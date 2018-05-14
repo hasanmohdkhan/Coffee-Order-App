@@ -4,6 +4,7 @@ import android.content.Intent;
 import android.graphics.Bitmap;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
+import android.support.v7.widget.CardView;
 import android.view.View;
 import android.widget.Button;
 import android.widget.ImageView;
@@ -20,6 +21,8 @@ public class CoffeeDetails extends AppCompatActivity implements View.OnClickList
     String nameOfProduct, wiki, selectedOptionsforCoffee = "", selectedOptionForMilk = "", selectOptionforSyrup = "";
     String orderSummary;
     private LinearLayout smallPriceCard, mediumPriceCard, largePriceCard;
+
+    private CardView smallCard,mediumCard,largeCard;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -50,6 +53,10 @@ public class CoffeeDetails extends AppCompatActivity implements View.OnClickList
         smallPriceCard = findViewById(R.id.small_price_card);
         mediumPriceCard = findViewById(R.id.medium_price_card);
         largePriceCard = findViewById(R.id.large_price_card);
+
+        smallCard = findViewById(R.id.card_small);
+        mediumCard =findViewById(R.id.card_medium);
+        largeCard =findViewById(R.id.crad_large);
 
         fullCreamMilk = findViewById(R.id.full_cream_card_switch);
         skimmedMilk = findViewById(R.id.skimmed_cream_card_switch);
@@ -114,27 +121,27 @@ public class CoffeeDetails extends AppCompatActivity implements View.OnClickList
     @Override
     public void onClick(View view) {
         if (view == smallPriceCard) {
-            smallPriceCard.setBackgroundColor(getResources().getColor(R.color.coffeeColor));
-            mediumPriceCard.setBackgroundColor(getResources().getColor(R.color.whiteColor));
-            largePriceCard.setBackgroundColor(getResources().getColor(R.color.whiteColor));
+            smallCard.setBackgroundColor(getResources().getColor(R.color.coffeeColor));
+            mediumCard.setBackgroundColor(getResources().getColor(R.color.whiteColor));
+            largeCard.setBackgroundColor(getResources().getColor(R.color.whiteColor));
             selectedOptionsforCoffee = "";
             selectedOptionsforCoffee = sizeSmall.getText().toString();
             priceOfOneCup = 5;
             updatePrice(priceOfOneCup, quantity);
         }
         if (view == mediumPriceCard) {
-            smallPriceCard.setBackgroundColor(getResources().getColor(R.color.whiteColor));
-            mediumPriceCard.setBackgroundColor(getResources().getColor(R.color.coffeeColor));
-            largePriceCard.setBackgroundColor(getResources().getColor(R.color.whiteColor));
+            smallCard.setBackgroundColor(getResources().getColor(R.color.whiteColor));
+            mediumCard.setBackgroundColor(getResources().getColor(R.color.coffeeColor));
+            largeCard.setBackgroundColor(getResources().getColor(R.color.whiteColor));
             selectedOptionsforCoffee = "";
             selectedOptionsforCoffee = sizMedium.getText().toString();
             priceOfOneCup = 10;
             updatePrice(priceOfOneCup, quantity);
         }
         if (view == largePriceCard) {
-            smallPriceCard.setBackgroundColor(getResources().getColor(R.color.whiteColor));
-            mediumPriceCard.setBackgroundColor(getResources().getColor(R.color.whiteColor));
-            largePriceCard.setBackgroundColor(getResources().getColor(R.color.coffeeColor));
+            smallCard.setBackgroundColor(getResources().getColor(R.color.whiteColor));
+            mediumCard.setBackgroundColor(getResources().getColor(R.color.whiteColor));
+            largeCard.setBackgroundColor(getResources().getColor(R.color.coffeeColor));
 
             selectedOptionsforCoffee = "";
             selectedOptionsforCoffee = sizeLarge.getText().toString();
@@ -205,7 +212,7 @@ public class CoffeeDetails extends AppCompatActivity implements View.OnClickList
     }
 
     private void displayQuantity(int number) {
-        TextView quantityTextView = (TextView) findViewById(R.id.quantity_text_view);
+        TextView quantityTextView = findViewById(R.id.quantity_text_view);
         quantityTextView.setText("" + number);
     }
 
